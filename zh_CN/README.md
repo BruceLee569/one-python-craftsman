@@ -17,8 +17,9 @@
 - [14-面向对象代码的原则（下）](14-面向对象代码的原则（下）.md)
 - [15-在边界处思考](15-在边界处思考.md)
 
-## 以下为原文章 [Github](https://github.com/piglei/one-python-craftsman) 展示页
+## 以下为原文 [Github](https://github.com/piglei/one-python-craftsman) 展示页
 
+------
 
 
 《Python 工匠》图书首页上线啦！共有 3 章在线内容，欢迎阅读。

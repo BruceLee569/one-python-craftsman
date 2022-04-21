@@ -3,10 +3,11 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" sizes="any" mask="" href="//Python.svg">
     <meta charset="UTF-8">
     <!--禁用referer（链接标签中可以使用属性来实现 rel="noreferrer"） https://blog.csdn.net/weixin_43627766/article/details/90311889-->
     <meta name="referrer" content="never">
-    <title>Python工匠</title>
+    <title>《Python工匠》</title>
     <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/themes/vue.css">-->
     <!--    <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">-->
     <!--    <link rel="stylesheet" href="//unpkg.com/docsify/themes/buble.css">-->
@@ -128,7 +129,7 @@
         // relativePath: true,  // 链接使用相对路径
         // coverpage: true,  // 启用封面页，默认加载_coverpage.md文件，也可以自定义文件名
         // logo: '/icon.svg', /* 左上角侧边栏logo，可以使用CSS来更改大小
-        name: '《左耳听风》专栏',  // 文档标题，会显示在侧边栏顶部，支持html格式文本定制
+        name: '《Python工匠》',  // 文档标题，会显示在侧边栏顶部，支持html格式文本定制
         // nameLink: '/',  // 点击文档标题后跳转的链接地址
         // markdown: {},  // 配置markdown解析器
         // themeColor: 'rgb(23,147,209)',  // 替换主题色，支持 CSS3 变量
@@ -358,7 +359,7 @@
     // 解决黑暗模式不适配toc插件
     setInterval(function () {
         var toc_text_color = getComputedStyle(document.querySelector('main')).getPropertyValue('color-scheme') === 'dark' ? 'white' : 'black'
-        document.querySelectorAll('.page_toc span').forEach(
+        document.querySelectorAll('.page_toc a').forEach(
             function (e) {
                 e.style.color = toc_text_color
             }

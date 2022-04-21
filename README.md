@@ -17,7 +17,7 @@
 ### [14-面向对象代码的原则（下）](zh_CN/14-面向对象代码的原则（下）.md)
 ### [15-在边界处思考](zh_CN/15-在边界处思考.md)
 
-## 以下为原项目 [Github](https://github.com/piglei/one-python-craftsman) 介绍页
+## 以下为[原项目](https://github.com/piglei/one-python-craftsman) Github 介绍页
 
 ------
 

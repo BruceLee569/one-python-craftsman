@@ -179,7 +179,7 @@
             maxAge: 86400000, // 过期时间，单位毫秒，默认一天
             paths: [], // or 'auto'
             placeholder: {
-                '/': '搜索',
+                '/': '搜索 ( Ctrl + K )',
                 '/en/': 'Type to search'
             },
             noData: {
@@ -342,7 +342,7 @@
 
 <script>
     // 搜索框支持快捷键
-    setTimeout(function run_js_delay() {
+    setTimeout(function () {
         let inp = document.querySelector('input[type="search"]');
         document.addEventListener("keydown", function (e) {
             if (e.ctrlKey && e.code === "KeyK") {
@@ -351,9 +351,9 @@
                 inp.select();
             }
         });
-        if (!window.Docsify.util.isMobile) {
-            inp.setAttribute("placeholder", inp.placeholder + " ( Ctrl + K )")
-        }
+        // if (!window.Docsify.util.isMobile) {
+        //     inp.setAttribute("placeholder", inp.placeholder + " ( Ctrl + K )")
+        // }
     }, 200);
 
     // 解决黑暗模式不适配toc插件

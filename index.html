@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-<!--    <link rel="icon" sizes="any" mask="" href="//Python.svg">-->
+    <link rel="icon" sizes="any" mask="" href="//favicon.ico">
     <meta charset="UTF-8">
     <!--禁用referer（链接标签中可以使用属性来实现 rel="noreferrer"） https://blog.csdn.net/weixin_43627766/article/details/90311889-->
     <meta name="referrer" content="never">
@@ -179,7 +179,7 @@
             maxAge: 86400000, // 过期时间，单位毫秒，默认一天
             paths: [], // or 'auto'
             placeholder: {
-                '/': window.Docsify.util.isMobile ? '搜索' : '搜索 ( Ctrl + K )',
+                '/': /mobile/i.test(navigator.userAgent) ? '搜索' : '搜索 ( Ctrl + K )',
                 '/en/': 'Type to search'
             },
             noData: {

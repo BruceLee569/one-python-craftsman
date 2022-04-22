@@ -8,6 +8,7 @@
     <!--禁用referer（链接标签中可以使用属性来实现 rel="noreferrer"） https://blog.csdn.net/weixin_43627766/article/details/90311889-->
     <meta name="referrer" content="never">
     <title>《Python工匠》</title>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/themes/vue.css">-->
     <!--    <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">-->
     <!--    <link rel="stylesheet" href="//unpkg.com/docsify/themes/buble.css">-->
@@ -339,6 +340,15 @@
 
 <!--谷歌分析-->
 <!--<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script>-->
+
+<!-- valine无后端评论系统 https://valine.js.org/quickstart.html -->
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'PHalJUcdodWmeIDrv6vcdjoQ-9Nh9j0Va',
+        appKey: '0clIJq6497kczkWA9UDDSHKM'
+    })
+</script>
 
 <script>
     // 搜索框支持快捷键

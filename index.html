@@ -4,21 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="UTF-8">
-    <!--禁用referer（链接标签中可以使用属性来实现 rel="noreferrer"） https://blog.csdn.net/weixin_43627766/article/details/90311889-->
     <meta name="referrer" content="never">
     <link rel="icon" type="image/png" href="./Python.svg"/>
     <title>《Python工匠》</title>
-<!--    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>-->
-    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/themes/vue.css">-->
-    <!--    <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">-->
-    <!--    <link rel="stylesheet" href="//unpkg.com/docsify/themes/buble.css">-->
-    <!--    <link rel="stylesheet" href="//unpkg.com/docsify/themes/dark.css">-->
-    <!--    <link rel="stylesheet" href="//unpkg.com/docsify/themes/pure.css">-->
-    <!--    <link rel="stylesheet" href="//unpkg.com/docsify/themes/dolphin.css">-->
-    <!-- docsify-themeable：https://jhildenbiddle.github.io/docsify-themeable/#/quick-start -->
+
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"/>
 
-    <!--样式参考网站：https://sa-token.dev33.cn/doc/index.html#/、-->
     <style>
         .markdown-section {
             position: relative;
@@ -27,26 +18,11 @@
             margin: 0 auto;
             padding: 2rem 45px
         }
-
         .markdown-section p {
             /*正文行高*/
             line-height: 30px;
         }
-
-        /*正文第一张封面图圆角显示*/
-        .markdown-section > p:nth-of-type(2) > img {
-            vertical-align: top;
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
         /* ============== code代码样式优化 ================ */
-
-        /* 背景变黑 */
-        /*.markdown-section [data-lang]{padding: 0px !important; border-radius: 2px;overflow-x: auto; overflow-y: hidden;}*/
-        /*.markdown-section pre code{border: 0px red solid; border-radius: 0px; !* background-color: #282828; *! background-color: #191919; color: #FFF;}*/
-        /*.markdown-section pre code{padding: 1.5em 1.3em; margin-left: 40px !important;}*/
-
         /*侧边栏边距控制*/
         .sidebar-nav li {
             position: relative;
@@ -106,12 +82,9 @@
                 display: none;
             }
         }
-
     </style>
-    <!-- 文件夹样式 -->
-    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css"/>-->
     <!-- 箭头样式 -->
-    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"/>-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"/>
 
 </head>
 <body>
@@ -120,18 +93,13 @@
 <script>
     // 默认的可配置项：https://docsify.js.org/#/zh-cn/configuration?id=el
     window.$docsify = {
-        // el: '#app',  // docsify初始化的挂载元素，默认#app，不存在则挂载在body上
         // nameLink: 'https://ashiamd.github.io/docsify-notes/#/README',
         // repo: 'BruceLee569/PublicSource',  // 配置仓库地址，支持username/repo字符串，会在右上角显示 GitHub 角标
         maxLevel: 6,  // 最大支持渲染的标题层级
         // loadNavbar: true,  // 加载自定义导航栏，默认加载_navbar.md，加载别的文件把true改成“xxx.md”
         loadSidebar: true,  // 加载自定义的侧边栏，默认加载_sidebar.md，加载别的文件把true改成“xxx.md”
-        // hideSidebar: true,  // 完全隐藏侧边栏
         subMaxLevel: 3,  // 自定义侧边栏后默认不会再生成目录，通过设置生成目录的最大层级开启这个功能
         auto2top: true,  // 切换页面后自动跳转到页面顶部
-        // homepage: 'home.md',  // 设置首页文件加载路径，默认为 README.md
-        // basePath: '/path/',  // 文档加载的根路径，可以是二级路径或者是其他域名
-        // relativePath: true,  // 链接使用相对路径
         // coverpage: true,  // 启用封面页，默认加载_coverpage.md文件，也可以自定义文件名
         // logo: './Python.svg', // 左上角侧边栏logo，可以使用CSS来更改大小
         name: '《Python工匠》',  // 文档标题，会显示在侧边栏顶部，支持html格式文本定制
@@ -149,28 +117,10 @@
         // 执行文档里的 script 标签里的脚本，只执行第一个 script (demo)。 如果 Vue 存在，则自动开启。
         // 注意如果执行的是一个外链脚本，比如 jsfiddle 的内嵌 demo，请确保引入 external-script 插件。
         executeScript: true,
-        // noEmoji: true,  // 禁用 emoji 解析
         mergeNavbar: true,  // 小屏设备下合并导航栏到侧边栏
-        formatUpdated: '{YYYY}年{MM}月{DD}日',  // 配置文档更新日期格式，通过 {docsify-updated} 变量显示
-        // externalLinkTarget: '_self',  // 外部链接的打开方式。默认为 _blank
-        // cornerExternalLinkTarget: '_self'// 右上角链接的打开方式。默认为 _blank
-        // externalLinkRel: '', // 防止新打开的外部页面，默认为 noopener
-        // routerMode: 'history', // 默认为 'hash'
-        // 当设置了routerMode:'history'时，你可能会面临跨域的问题，参见 #1379 。在 Markdown 内容中，有一个简单的方法可以解决，参见helpers 中的跨域链接。
-        // crossOriginLinks: ['https://example.com/cross-origin-link'],
-        // noCompileLinks: ['/foo', '/bar/.*'], // 有时我们不希望 docsify 处理我们的链接
-        // onlyCover: true,  // 只在访问主页时加载封面
-        // requestHeaders: { 'cache-control': 'max-age=600', },  // 设置请求资源的请求头
-        // ext: '.md',  // 资源的文件扩展名
-        // fallbackLanguages: ['fr', 'de'],  // 支持回退的语言翻译文档列表
+        // formatUpdated: '{YYYY}年{MM}月{DD}日',  // 配置文档更新日期格式，通过 {docsify-updated} 变量显示
         notFoundPage: true,  // 在找不到指定页面时加载 _404.md
         topMargin: 20,  // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。当你使用 固定页头 布局时这个选项很有用，可以让你的锚点对齐标题栏。
-        // 创建并注册全局 Vue组件 。组件是以组件名称为键，以包含 Vue 选项的对象为值来指定的。组件data对每个实例都是唯一的，并且在用户浏览网站时不会持久。
-        // vueComponents: {},
-        // 指定 Vue选项 ，用于未明确使用vueMounts、vueComponents或markdown脚本挂载的 Vue 内容。对全局data的更改将持续存在，并在任何使用全局引用的地方得到反映。
-        // vueGlobalOptions: {},
-        // 指定要挂载为 Vue实例 的 DOM 元素及其相关选项。挂载元素使用 CSS选择器 作为键，并使用包含 Vue 选项的对象作为其值。每次加载新页面时，Docsify 将挂载主内容区域中第一个匹配的元素。挂载元素data对每个实例来说都是唯一的，并且不会在用户浏览网站时持久存在。
-        // vueMounts: {},
         // 配置插件
         // ----------------------------------------------------------------
         // 代码复制
@@ -194,18 +144,6 @@
             // 搜索标题的最大层级, 1 - 6
             depth: 3,
             hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
-            // 避免搜索索引冲突
-            // 同一域下的多个网站之间
-            namespace: 'website-1',
-            // 使用不同的索引作为路径前缀（namespaces）
-            // 注意：仅适用于 paths: 'auto' 模式
-            //
-            // 初始化索引时，我们从侧边栏查找第一个路径
-            // 如果它与列表中的前缀匹配，我们将切换到相应的索引
-            // pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
-            // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
-            // 匹配到的字符串将被用来识别索引
-            // pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
         },
         // 底部导航
         pagination: {
@@ -224,7 +162,7 @@
             el: '#vcomments',
             appId: 'PHalJUcdodWmeIDrv6vcdjoQ-9Nh9j0Va',
             appKey: '0clIJq6497kczkWA9UDDSHKM',
-            // docPath: 'hash', //default to `hash` ,or you can choose `full`
+            placeholder: '请留言。',
         },
         // 字数统计 https://github.com/827652549/docsify-count
         count: {
@@ -244,41 +182,13 @@
         plugins: [
             function (hook, vm) {
                 hook.beforeEach(function (html) {
-                    return (
-                        html +
-                        '\n----\n' +
-                        '修改时间：{docsify-updated} '
-                    );
+                    // return (
+                    //     html +
+                    //     '\n----\n' +
+                    //     '修改时间：{docsify-updated} '
+                    // );
                 });
             }
-            // 添加文档编辑按钮
-            // function (hook, vm) {
-            //     hook.beforeEach(function (html) {
-            //         var url =
-            //             'https://github.com/docsifyjs/docsify/blob/master/docs/' +
-            //             vm.route.file;
-            //         var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n';
-            //
-            //         return (
-            //             editHtml +
-            //             html +
-            //             '\n----\n' +
-            //             'Last modified {docsify-updated} ' +
-            //             editHtml
-            //         );
-            //     });
-            // },
-            // 添加网站运行时间
-            // function (hook, vm) {
-            //     hook.mounted(function () {
-            //         let dom = Docsify.dom;
-            //         let runTimeNode = dom.create('div');
-            //         runTimeNode.className = 'runtime';
-            //         runTimeNode.style =
-            //             'color: #8590a6;max-width: 80%;margin: 0 auto 20px;padding: 0 15px 0 15px;';
-            //         dom.appendTo(dom.find('.content'), runTimeNode);
-            //     });
-            // },
         ],
     };
 </script>
@@ -290,12 +200,7 @@
 
 <!-- 代码高亮  https://cdn.jsdelivr.net/npm/prismjs@1/components/ -->
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
-<!--<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
 
 <!-- 代码复制 https://github.com/jperasmus/docsify-copy-code/blob/master/README.md-->
 <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
@@ -327,31 +232,6 @@
 <!-- 页面右侧 TOC -->
 <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.1.0/dist/docsify-plugin-toc.min.js"></script>
 
-<!--在 Github 上编辑-->
-<!--https://github.com/njleonzhang/docsify-edit-on-github-->
-<!--<script src="https://cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>-->
-
-<!--Gitalk-->
-<!--https://github.com/gitalk/gitalk-->
-<!--<script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>-->
-<!--<script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>-->
-
-<!--回到顶部按钮-->
-<!--<script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>-->
-<!--<script>-->
-<!--    addBackToTop({-->
-<!--        diameter: 56,-->
-<!--        backgroundColor: 'rgb(66, 185, 131)',-->
-<!--        textColor: '#fff',-->
-<!--    });-->
-<!--</script>-->
-
-<!-- 正文多tab页支持 -->
-<!--<script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>-->
-
-<!--谷歌分析-->
-<!--<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script>-->
-
 <!-- valine无后端评论系统 https://valine.js.org/quickstart.html、https://github.com/daidi/docsify-valine -->
 <script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
 <script src="./docsify-valine.min.js"></script>
@@ -367,11 +247,7 @@
                 inp.select();
             }
         });
-        // if (!window.Docsify.util.isMobile) {
-        //     inp.setAttribute("placeholder", inp.placeholder + " ( Ctrl + K )")
-        // }
     }, 200);
-
     // 解决黑暗模式不适配toc插件
     setInterval(function () {
         var toc_text_color = getComputedStyle(document.querySelector('main')).getPropertyValue('color-scheme') === 'dark' ? 'white' : 'black'
@@ -381,68 +257,6 @@
             }
         )
     }, 100);
-
-    let markdown = document.getElementsByClassName('markdown-section')[0];
-    let comment = document.getElementsByName('vcomments')[0];
-    markdown.parentNode.insertBefore(app_name, search_plugin);
-
-    // 更换左上角站点名称和搜索框的显示位置
-    // function change_search_plugin_order() {
-    //     let search_plugin = document.getElementsByClassName('search')[0];
-    //     let app_name = document.getElementsByClassName('app-name')[0];
-    //     search_plugin.parentNode.insertBefore(app_name, search_plugin);
-    // }
 </script>
-
-<!-- 添加网站运行时间统计 -->
-<!--<script>-->
-<!--    function siteTime() {-->
-<!--        setTimeout(siteTime, 1000);-->
-<!--        let seconds = 1000;-->
-<!--        let minutes = seconds * 60;-->
-<!--        let hours = minutes * 60;-->
-<!--        let days = hours * 24;-->
-<!--        let today = new Date();-->
-<!--        let todayYear = today.getFullYear();-->
-<!--        let todayMonth = today.getMonth() + 1;-->
-<!--        let todayDate = today.getDate();-->
-<!--        let todayHour = today.getHours();-->
-<!--        let todayMinute = today.getMinutes();-->
-<!--        let todaySecond = today.getSeconds();-->
-
-<!--        let t1 = Date.UTC(2021, 2, 27, 0, 0, 0);-->
-<!--        let t2 = Date.UTC(-->
-<!--            todayYear,-->
-<!--            todayMonth,-->
-<!--            todayDate,-->
-<!--            todayHour,-->
-<!--            todayMinute,-->
-<!--            todaySecond-->
-<!--        );-->
-<!--        let diff = t2 - t1;-->
-<!--        let diffDays = Math.floor(diff / days);-->
-<!--        let diffHours = Math.floor((diff - diffDays * days) / hours);-->
-<!--        let diffMinutes = Math.floor(-->
-<!--            (diff - diffDays * days - diffHours * hours) / minutes-->
-<!--        );-->
-<!--        let diffSeconds = Math.floor(-->
-<!--            (diff - diffDays * days - diffHours * hours - diffMinutes * minutes) /-->
-<!--            seconds-->
-<!--        );-->
-<!--        Docsify.dom.find('.runtime').innerHTML =-->
-<!--            '本站点 已运行 ' +-->
-<!--            diffDays +-->
-<!--            ' 天 ' +-->
-<!--            diffHours +-->
-<!--            ' 小时 ' +-->
-<!--            diffMinutes +-->
-<!--            ' 分 ' +-->
-<!--            diffSeconds +-->
-<!--            ' 秒';-->
-<!--    }-->
-
-<!--    // 先让网页加载完，否则 Docsify.dom.find('.runtime') == null-->
-<!--    setTimeout(siteTime, 500);-->
-<!--</script>-->
 </body>
 </html>

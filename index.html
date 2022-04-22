@@ -219,6 +219,12 @@
             tocMaxLevel: 3,
             target: "h2, h3, h4, h5, h6",
         },
+        // docsify-valine (defaults)
+        Valine: {
+            appId: 'PHalJUcdodWmeIDrv6vcdjoQ-9Nh9j0Va',
+            appKey: '0clIJq6497kczkWA9UDDSHKM',
+            // docPath: 'hash', //default to `hash` ,or you can choose `full`
+        },
         // 字数统计 https://github.com/827652549/docsify-count
         count: {
             countable: true,
@@ -346,13 +352,8 @@
 <!--<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script>-->
 
 <!-- valine无后端评论系统 https://valine.js.org/quickstart.html -->
-<script>
-    new Valine({
-        el: '#vcomments',
-        appId: 'PHalJUcdodWmeIDrv6vcdjoQ-9Nh9j0Va',
-        appKey: '0clIJq6497kczkWA9UDDSHKM'
-    })
-</script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="//unpkg.com/docsify-valine/dist/docsify-valine.min.js"></script>
 
 <script>
     // 搜索框支持快捷键

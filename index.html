@@ -128,7 +128,7 @@
         // basePath: '/path/',  // 文档加载的根路径，可以是二级路径或者是其他域名
         // relativePath: true,  // 链接使用相对路径
         // coverpage: true,  // 启用封面页，默认加载_coverpage.md文件，也可以自定义文件名
-        // logo: '/icon.svg', /* 左上角侧边栏logo，可以使用CSS来更改大小
+        logo: '/Python.svg', // 左上角侧边栏logo，可以使用CSS来更改大小
         name: '《Python工匠》',  // 文档标题，会显示在侧边栏顶部，支持html格式文本定制
         // nameLink: '/',  // 点击文档标题后跳转的链接地址
         // markdown: {},  // 配置markdown解析器
@@ -179,7 +179,7 @@
             maxAge: 86400000, // 过期时间，单位毫秒，默认一天
             paths: [], // or 'auto'
             placeholder: {
-                '/': '搜索 ( Ctrl + K )',
+                '/': window.Docsify.util.isMobile ? '搜索' : '搜索 ( Ctrl + K )',
                 '/en/': 'Type to search'
             },
             noData: {
@@ -367,11 +367,11 @@
     }, 100);
 
     // 更换左上角站点名称和搜索框的显示位置
-    function change_search_plugin_order() {
-        let search_plugin = document.getElementsByClassName('search')[0];
-        let app_name = document.getElementsByClassName('app-name')[0];
-        search_plugin.parentNode.insertBefore(app_name, search_plugin);
-    }
+    // function change_search_plugin_order() {
+    //     let search_plugin = document.getElementsByClassName('search')[0];
+    //     let app_name = document.getElementsByClassName('app-name')[0];
+    //     search_plugin.parentNode.insertBefore(app_name, search_plugin);
+    // }
 </script>
 
 <!-- 添加网站运行时间统计 -->

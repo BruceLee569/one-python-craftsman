@@ -8,7 +8,7 @@
     <meta name="referrer" content="never">
     <link rel="icon" type="image/png" href="./Python.svg"/>
     <title>《Python工匠》</title>
-    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<!--    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>-->
     <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/themes/vue.css">-->
     <!--    <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">-->
     <!--    <link rel="stylesheet" href="//unpkg.com/docsify/themes/buble.css">-->
@@ -221,6 +221,7 @@
         },
         // docsify-valine (defaults)
         Valine: {
+            el: '#vcomments',
             appId: 'PHalJUcdodWmeIDrv6vcdjoQ-9Nh9j0Va',
             appKey: '0clIJq6497kczkWA9UDDSHKM',
             // docPath: 'hash', //default to `hash` ,or you can choose `full`
@@ -351,9 +352,9 @@
 <!--谷歌分析-->
 <!--<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script>-->
 
-<!-- valine无后端评论系统 https://valine.js.org/quickstart.html -->
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script src="//unpkg.com/docsify-valine/dist/docsify-valine.min.js"></script>
+<!-- valine无后端评论系统 https://valine.js.org/quickstart.html、https://github.com/daidi/docsify-valine -->
+<script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="./docsify-valine.min.js"></script>
 
 <script>
     // 搜索框支持快捷键
@@ -380,6 +381,10 @@
             }
         )
     }, 100);
+
+    let markdown = document.getElementsByClassName('markdown-section')[0];
+    let comment = document.getElementsByName('vcomments')[0];
+    markdown.parentNode.insertBefore(app_name, search_plugin);
 
     // 更换左上角站点名称和搜索框的显示位置
     // function change_search_plugin_order() {

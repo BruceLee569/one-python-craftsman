@@ -7,9 +7,7 @@
     <meta name="referrer" content="never">
     <link rel="icon" type="image/png" href="./Python.svg"/>
     <title>《Python工匠》</title>
-
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"/>
-
     <style>
         .markdown-section {
             position: relative;
@@ -18,10 +16,12 @@
             margin: 0 auto;
             padding: 2rem 45px
         }
+
         .markdown-section p {
             /*正文行高*/
             line-height: 30px;
         }
+
         /* ============== code代码样式优化 ================ */
         /*侧边栏边距控制*/
         .sidebar-nav li {
@@ -84,43 +84,33 @@
         }
     </style>
     <!-- 箭头样式 -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"/>
 
 </head>
 <body>
 <!--收到 docsify.min.js 文件响应之前显示的页面-->
 <div id="app">加载中...</div>
 <script>
-    // 默认的可配置项：https://docsify.js.org/#/zh-cn/configuration?id=el
+    // 配置项：https://docsify.js.org/#/zh-cn/configuration?id=el
     window.$docsify = {
-        // nameLink: 'https://ashiamd.github.io/docsify-notes/#/README',
-        // repo: 'BruceLee569/PublicSource',  // 配置仓库地址，支持username/repo字符串，会在右上角显示 GitHub 角标
-        maxLevel: 6,  // 最大支持渲染的标题层级
-        // loadNavbar: true,  // 加载自定义导航栏，默认加载_navbar.md，加载别的文件把true改成“xxx.md”
-        loadSidebar: true,  // 加载自定义的侧边栏，默认加载_sidebar.md，加载别的文件把true改成“xxx.md”
-        subMaxLevel: 3,  // 自定义侧边栏后默认不会再生成目录，通过设置生成目录的最大层级开启这个功能
-        auto2top: true,  // 切换页面后自动跳转到页面顶部
-        // coverpage: true,  // 启用封面页，默认加载_coverpage.md文件，也可以自定义文件名
-        // logo: './Python.svg', // 左上角侧边栏logo，可以使用CSS来更改大小
-        name: '《Python工匠》',  // 文档标题，会显示在侧边栏顶部，支持html格式文本定制
-        // nameLink: '/',  // 点击文档标题后跳转的链接地址
-        // markdown: {},  // 配置markdown解析器
-        // themeColor: 'rgb(23,147,209)',  // 替换主题色，支持 CSS3 变量
-        alias: {  // 定义路由别名，可以更自由的定义路由规则。支持正则
-            // '/foo/(.*)': '/bar/$1', // supports regexp
-            // '/zh-cn/changelog': '/changelog',
-            // '/changelog':
-            //     'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG',
+        maxLevel: 6,
+        // loadNavbar: true,
+        loadSidebar: true,
+        subMaxLevel: 3,
+        auto2top: true,
+        // coverpage: true,
+        // logo: './Python.svg',
+        name: '《Python工匠》',
+        // nameLink: '/',
+        alias: {
             '/.*/_sidebar.md': '/_sidebar.md', // See #301
         },
-        // autoHeader: true,  // 同时开启 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题。
-        // 执行文档里的 script 标签里的脚本，只执行第一个 script (demo)。 如果 Vue 存在，则自动开启。
-        // 注意如果执行的是一个外链脚本，比如 jsfiddle 的内嵌 demo，请确保引入 external-script 插件。
+        // autoHeader: true,
         executeScript: true,
-        mergeNavbar: true,  // 小屏设备下合并导航栏到侧边栏
-        // formatUpdated: '{YYYY}年{MM}月{DD}日',  // 配置文档更新日期格式，通过 {docsify-updated} 变量显示
-        notFoundPage: true,  // 在找不到指定页面时加载 _404.md
-        topMargin: 20,  // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。当你使用 固定页头 布局时这个选项很有用，可以让你的锚点对齐标题栏。
+        mergeNavbar: true,
+        // formatUpdated: '{YYYY}年{MM}月{DD}日',
+        notFoundPage: true,
+        topMargin: 20,
         // 配置插件
         // ----------------------------------------------------------------
         // 代码复制
@@ -182,11 +172,6 @@
         plugins: [
             function (hook, vm) {
                 hook.beforeEach(function (html) {
-                    // return (
-                    //     html +
-                    //     '\n----\n' +
-                    //     '修改时间：{docsify-updated} '
-                    // );
                 });
             }
         ],
